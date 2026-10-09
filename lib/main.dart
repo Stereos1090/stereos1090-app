@@ -38,6 +38,22 @@ class RadioHomePage extends StatefulWidget {
 }
 
 class _RadioHomePageState extends State<RadioHomePage> with SingleTickerProviderStateMixin {
+// Listas de reproducción por Bloques y Jingles desde Cloudflare R2
+  final List<String> bloque1Playlist = [
+    'https://pub-992fd43f91d3490097f017780c0c3e4e.r2.dev/01_Ambiental_Tranquilo/pista_ambiental.mp3',
+    'https://pub-992fd43f91d3490097f017780c0c3e4e.r2.dev/01_Dance_y_electronica_Alegre/pista_dance.mp3',
+    'https://pub-992fd43f91d3490097f017780c0c3e4e.r2.dev/01_Rock_Enfadado/pista_rock.mp3',
+  ];
+
+  final List<String> bloque2Playlist = [
+    'https://pub-992fd43f91d3490097f017780c0c3e4e.r2.dev/02_Cinematografica_Dramatico/pista_cine.mp3',
+    'https://pub-992fd43f91d3490097f017780c0c3e4e.r2.dev/02_Jazz_y_blues_Funky/pista_jazz.mp3',
+    'https://pub-992fd43f91d3490097f017780c0c3e4e.r2.dev/02_Pop_Inspirador/pista_pop.mp3',
+  ];
+
+  final List<String> jinglesPlaylist = [
+    'https://pub-992fd43f91d3490097f017780c0c3e4e.r2.dev/Jingles_IvanLoscher/jingle_principal.mp3',
+  ];
   int _currentIndex = 0;
   bool isAudioMode = true; // true = Audio en Vivo, false = VIDEO STREAM
   String currentSong = 'Transmisión en Vivo';
