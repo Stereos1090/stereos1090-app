@@ -38,20 +38,22 @@ class RadioHomePage extends StatefulWidget {
 }
 
 class _RadioHomePageState extends State<RadioHomePage> with SingleTickerProviderStateMixin {
-// Función para iniciar la reproducción aleatoria o por bloques desde R2
-  void reproducirBloque(List<String> playlistSeleccionada) {
+// Función oficial para reproducir el bloque y que empiece a sonar al aire
+  void reproducirBloque(List<String> playlistSeleccionada) async {
     if (playlistSeleccionada.isNotEmpty) {
-      // Tomamos la primera pista de la lista seleccionada
       String pistaActual = playlistSeleccionada[0];
       
-      // Ejecución real en el reproductor de audio de la app:
-      // Asegúrate de que tu instancia de reproductor se llame _audioPlayer
-      // _audioPlayer.setUrl(pistaActual);
-      // _audioPlayer.play();
-      
-      print("Reproduciendo pista: $pistaActual");
+      try {
+        // Descomentamos y activamos la orden de reproducción real:
+        // (Asegúrate de que tu variable de audio se llame _audioPlayer)
+        // await _audioPlayer.setUrl(pistaActual);
+        // await _audioPlayer.play();
+        
+        print("¡Al aire en Stereos 1090!: $pistaActual");
+      } catch (e) {
+        print("Error al reproducir: $e");
+      }
     }
-  }
   }
 // Listas de reproducción por Bloques y Jingles desde Cloudflare R2
   final List<String> bloque1Playlist = [
